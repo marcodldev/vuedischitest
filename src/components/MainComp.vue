@@ -17,7 +17,10 @@ export default {
     SearchComp,
   },
   data () {
-    this.elementoEmittato = {}
+    return {
+        elementoEmittato : {}
+    }
+    
   },
   methods: {
     mostraDischi (elem) {
