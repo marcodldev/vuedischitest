@@ -2,7 +2,9 @@
     <div>
         maincomptest
         <SearchComp />
-       <!-- // <button @click="$emit(emitSearch, lorem)"></button> -->
+        <div @emitDischi="mostraDischi">
+            {{elementoEmittato}}
+        </div>
     </div>
 </template>
 
@@ -14,6 +16,20 @@ export default {
   components: {
     SearchComp,
   },
+  data () {
+    this.elementoEmittato = {}
+  },
+  methods: {
+    mostraDischi (elem) {
+        console.log(elem);
+      return this.elementoEmittato = elem
+    }
+},
+mounted : {
+      mostraDischi () {
+        
+      },
+},
 };
 </script>
 

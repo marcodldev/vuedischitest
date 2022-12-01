@@ -2,7 +2,7 @@
   <div>
     <select name="" id="">
         <option v-for="(elem,index) in dischi" :key="index" value="index"
-        >{{elem.genre}}</option>
+        @change="$emit('emitDischi' , elem)" >{{elem.genre}}</option>
     </select>
   </div>
 </template>
